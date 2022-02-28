@@ -16,3 +16,4 @@ for i in range(m):
     else:
         ans += cnt[i] * (cnt[i] - 1) >> 1
 print(ans)
+
