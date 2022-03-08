@@ -1,0 +1,19 @@
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+
+num = 666
+count = 0
+result = 0
+
+while True:
+    if "666" in str(num):
+        count += 1
+    
+    if count == N:
+        result = num
+        break
+    num += 1
+
+print(result)
