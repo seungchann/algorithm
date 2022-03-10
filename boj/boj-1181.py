@@ -8,6 +8,7 @@ for _ in range(N):
     word = input().rstrip()
     array.append((word, len(word)))
 
+# 중복 제거
 array = list(set(array))
 array.sort(key= lambda x: (x[1], x[0]))
 
