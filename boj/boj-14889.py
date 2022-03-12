@@ -1,4 +1,3 @@
-from math import comb
 import sys
 from itertools import combinations
 input = sys.stdin.readline
