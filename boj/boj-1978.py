@@ -1,20 +1,22 @@
-import math
 import sys
-
 input = sys.stdin.readline
 
-n = int(input())
+N = int(input())
 array = list(map(int, input().split()))
-answer_list = []
 
-for idx in range(len(array)):
-    is_correct = False
-    if array[idx] == 1:
-        answer_list.append(array[idx])
-        continue
-    for i in range(1, array[idx]):
-        if math.gcd(i, array[idx]) != 1:
-            answer_list.append(array[idx])
+def is_prime(n):
+    prime = True
+    for i in range(2, int(n**0.5)+1):
+        if n%i == 0:
+            prime = False
             break
-    
-print(len(array)-len(answer_list))
+    return prime
+
+result = 0
+for x in array:
+    if x == 1:
+        continue
+    elif is_prime(x):
+        result += 1
+
+print(result)
