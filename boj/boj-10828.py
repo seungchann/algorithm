@@ -8,6 +8,7 @@ for _ in range(N):
     string = list(input().split())
     command = ''
     num = 0
+    is_empty = len(stack) == 0
     
     if len(string) == 1:
         command = string[0]
@@ -17,19 +18,13 @@ for _ in range(N):
     if command == 'push':
         stack.append(num)
     elif command == 'pop':
-        if len(stack) == 0:
-            print(-1)
-        else:
-            print(stack.pop(-1))
+        if is_empty: print(-1)
+        else: print(stack.pop(-1))
     elif command == 'size':
         print(len(stack))
     elif command == 'empty':
-        if len(stack) == 0:
-            print(1)
-        else:
-            print(0)
+        if is_empty: print(1)
+        else: print(0)
     elif command == 'top':
-        if len(stack) == 0:
-            print(-1)
-        else:
-            print(stack[-1])
+        if is_empty: print(-1)
+        else: print(stack[-1])
