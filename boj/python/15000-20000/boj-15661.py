@@ -10,7 +10,7 @@ result = 10e9
 for _ in range(n):
     graph.append(list(map(int, input().split())))
 
-for i in range(n):
+for i in range(int(n/2)+1):
     if i == 0:
         continue
 
